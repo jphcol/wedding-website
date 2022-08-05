@@ -1,0 +1,26 @@
+body {
+    background-image: url("https://media.istockphoto.com/photos/flower-background-for-holidays-picture-id1206077453?b=1&k=20&m=1206077453&s=170667a&w=0&h=umFVscL_VWQHMWwkFF5QsWA6RQo4ji_csXYrIW9ZEFU=");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 46px;
+    text-align: center;
+    color: black;
+}
+.title {
+    padding-top: 400px;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-bottom: 100px;
+}
+.login {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    text-align: right;
+    padding-right: 1200px;
+}
