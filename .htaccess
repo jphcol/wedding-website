@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Protected Site"
-AuthUserFile /users/jackcoles/.htpasswd
-require valid-user
