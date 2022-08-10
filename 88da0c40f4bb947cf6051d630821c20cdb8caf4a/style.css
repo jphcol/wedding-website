@@ -1,10 +1,12 @@
-body {
+html {
   /*background-image: ;*/
-    background-image: linear-gradient(to bottom right, #ffffff, #ffffff, #ffffff);
-    background-color: #ffffff;
+    background-image: url(backgroundwedding.jpg);
+    background-color: #FAF9F6;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0px;
+    height: 100%;
 }
 h1 {
     margin: 0px;
@@ -13,7 +15,7 @@ h1 {
     font-size: 52px;
     text-align: center;
     color: black;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
 }
 .title {
     padding-top: 60px;
@@ -36,14 +38,14 @@ h2 {
     font-family: Baskerville, 'Times New Roman', Times, serif, Georgia;
     font-weight: lighter;
     padding-top: 40px;
-    font-size: 32;
+    font-size: 48;
     text-align: center;
 }
 p {
     font-family: Baskerville, 'Times New Roman', Times, serif, Georgia;
     font-weight: lighter;
     padding-top: 0px;
-    font-size: 32;
+    font-size: 20px;
     text-align: center;
 }
 #wedding {
@@ -54,7 +56,7 @@ p {
     font-size: 36px;
     letter-spacing: 1px;
 }
-ul {
+.navul {
     list-style-type: none;
     display: block;
     float: center;
@@ -64,7 +66,7 @@ ul {
     color: black;
     background-color: rgba(255, 255, 255, 0);
   }
-  li {
+  .navli {
     color: rgb(0, 0, 0);
     text-align: center;
     font-weight: lighter;
@@ -74,7 +76,7 @@ ul {
     display: inline-block; 
   }
   
-  li a:hover {
+  .navli a:hover {
     background-color: rgba(255, 255, 255, 0);
     color:rgb(0, 0, 0);
     border-style: solid;
@@ -83,7 +85,7 @@ ul {
     padding-left: 40px;
     padding-right: 40px;
   }
-  li a {
+  .navli a {
     color: rgb(0, 0, 0);
     text-align: center;
     font-weight: lighter;
@@ -93,9 +95,25 @@ ul {
     display: inline-block;
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(255, 255, 255);
+    border-color: #faf9f600;
     margin-left: 80px;
     margin-right: 80px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+  #accomodationlist {
+    text-align: center;
+    display: inline;
+    list-style: none;
+  }
+  .content-title {
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  article {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2%;
   }
