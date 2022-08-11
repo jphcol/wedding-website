@@ -58,6 +58,7 @@ p {
 }
 .navul {
     list-style-type: none;
+    font-size: 20px;
     display: block;
     float: center;
     overflow: hidden;
@@ -65,13 +66,14 @@ p {
     text-align: center;
     color: black;
     background-color: rgba(255, 255, 255, 0);
+    padding: 0;
   }
   .navli {
     color: rgb(0, 0, 0);
     text-align: center;
     font-weight: lighter;
     font-family: Baskerville, 'Times New Roman', Times, serif, Georgia;
-    padding: 4px 6px;
+    padding: 0.1% 0.3%;
     text-decoration: none;
     display: inline-block; 
   }
@@ -82,8 +84,8 @@ p {
     border-style: solid;
     border-width: 1px;
     border-color: black;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .navli a {
     color: rgb(0, 0, 0);
@@ -96,10 +98,10 @@ p {
     border-style: solid;
     border-width: 1px;
     border-color: #faf9f600;
-    margin-left: 80px;
-    margin-right: 80px;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   #accomodationlist {
     text-align: center;
@@ -108,7 +110,7 @@ p {
   }
   .content-title {
     text-align: center;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
     margin-left: 25%;
     margin-right: 25%;
   }
