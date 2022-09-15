@@ -4044,7 +4044,8 @@ body.has-navbar-fixed-bottom {
   display: block;
   height: 3.25rem;
   position: relative;
-  width: 3.25rem; }
+  width: 3.25rem;
+  margin-left: auto;}
   .navbar-burger span {
     background-color: currentColor;
     display: block;
