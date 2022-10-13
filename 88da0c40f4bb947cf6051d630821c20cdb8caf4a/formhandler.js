@@ -1,6 +1,5 @@
-const nameForm = document.querySelector('#name');
-
-function handleForm (nameForm) {
+function handleForm () {
+const nameForm = document.getElementById('formName');
 const Http = new XMLHttpRequest();
 const url='https://6sxnidgy4j.execute-api.eu-west-2.amazonaws.com/Production';
 Http.open("POST", url);
