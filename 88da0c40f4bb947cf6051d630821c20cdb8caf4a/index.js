@@ -6,9 +6,6 @@ burgerIcon.addEventListener('click', () => {
     burgerIcon.classList.toggle('is-active')
 });
 
-
-
-
 function handleForm () {
     const Http = new XMLHttpRequest();
     const url = 'https://eo76a395x0bkcxi.m.pipedream.net';
