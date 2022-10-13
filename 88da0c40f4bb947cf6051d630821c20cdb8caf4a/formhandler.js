@@ -1,4 +1,4 @@
-const nameForm = document.getElementById('#name');
+const nameForm = document.querySelector('#name');
 
 function handleForm (nameForm) {
 const Http = new XMLHttpRequest();
@@ -15,4 +15,4 @@ Http.send(
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
 }
-};
+}
