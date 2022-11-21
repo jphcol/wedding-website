@@ -1,18 +1,23 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quintessential&display=swap');
 
 // Set your brand colors
-$green: #c0cab8;
+$green: #828e67;
 $lightgreen: #a6beab;
 $brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
+$beige-light: #d9ddd0;
+$beige-lighter: hsl(0, 0%, 98%);
 $darkergreen: #214e28;
+$title-color: #d9ddd0;
+$subtitle-color: #d9ddd0;
+
+
 
 // Update Bulma's global variables
 $family-sans-serif: 'Quintessential', cursive;
+$family-secondary: 'Great Vibes', cursive;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $green;
@@ -21,8 +26,9 @@ $link: $lightgreen;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
+
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
+$body-background-color: $green;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
