@@ -1,11 +1,5 @@
 function handleForm () {
     const nameForm = document.getElementByIdAll('formName').value;
-    Http.onreadystatechange = (e) => {
-      console.log(Http.responseText)
-    };
-    if(alert('Thanks ' + nameForm)){}
-    else    window.location.reload(); 
-    }
     const rsvpAttending = document.getElementByIdAll('rsvpAttending').value;
     const rsvpNotAttending = document.getElementByIdAll('rsvpNotAttending').value;
     const firstCourse = document.getElementByIdAll('firstCourse').value;
@@ -31,3 +25,9 @@ function handleForm () {
             "MESSAGE" : message
             })
     );
+    Http.onreadystatechange = (e) => {
+      console.log(Http.responseText)
+    };
+    if(alert('Thanks ' + nameForm)){}
+    else    window.location.reload(); 
+    };
