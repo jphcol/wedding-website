@@ -11,8 +11,9 @@ function handleForm () {
             "Guest_Name" : nameForm
             })
     );
-    
     Http.onreadystatechange = (e) => {
       console.log(Http.responseText)
-    }
+    };
+    if(alert('Thanks ' + nameForm)){}
+    else    window.location.reload(); 
     }
