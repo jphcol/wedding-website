@@ -71,7 +71,7 @@
         <div class="columns">
           <div class="column">
             <p class="title">RSVP</p>
-            <p class="subtitle">Please complete the form, you will be asked if you need to RSVP for another guest at the bottom. Feel free to reach out if you have any queries.</p>
+            <p class="subtitle">Please have each member of your party complete the form. Feel free to reach out if you have any queries.</p>
           </div>
           <div class="column">
             <figure>
@@ -80,76 +80,73 @@
                   <div class="field">
                     <label class="label">Name</label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="Text input" id="formName">
+                      <input class="input" type="text" placeholder="Full Name" id="formName">
                     </div>
                   </div>
-                  
+
                   <div class="field">
-                    <label class="label">Username</label>
-                    <div class="control has-icons-left has-icons-right">
-                      <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
-                      </span>
-                      <span class="icon is-small is-right">
-                        <i class="fas fa-check"></i>
-                      </span>
+                    <label class="label">RSVP</label>
+                    <div class="control">
+                      <input class="radio" type="radio" id="rsvpAttending" value="Attending" name="rsvpRadio" onclick="attendingCheck()">
+                      <label for="rsvpAttending">Attending</label>
+                      <input class="radio" type="radio" id="rsvpNotAttending" value="Not Attending" name="rsvpRadio" onclick="attendingCheck()">
+                      <label for="rsvpNotAttending">Not Attending</label>
                     </div>
-                    <p class="help is-success">This username is available</p>
                   </div>
-                  
+
+                  <div id="menuChoices" style="display: none">
                   <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control has-icons-left has-icons-right">
-                      <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-envelope"></i>
-                      </span>
-                      <span class="icon is-small is-right">
-                        <i class="fas fa-exclamation-triangle"></i>
-                      </span>
-                    </div>
-                    <p class="help is-danger">This email is invalid</p>
-                  </div>
-                  
-                  <div class="field">
-                    <label class="label">Subject</label>
+                    <label class="label">First Course</label>
                     <div class="control">
                       <div class="select">
-                        <select>
-                          <option>Select dropdown</option>
-                          <option>With options</option>
+                        <select id="firstCourse">
+                          <option></option>
+                          <option>Miso Cod</option>
+                          <option>Smoked Trout</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Main Course</label>
+                    <div class="control">
+                      <div class="select">
+                        <select id="mainCourse">
+                          <option></option>
+                          <option>Guineafowl</option>
+                          <option>Beef</option>
                         </select>
                       </div>
                     </div>
                   </div>
                   
                   <div class="field">
+                    <label class="label">Dessert</label>
+                    <div class="control">
+                      <div class="select">
+                        <select id="dessertCourse">
+                          <option></option>
+                          <option>Chocolate Torte</option>
+                          <option>Passionfruit Parfait</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Allergies - We are having a nut free wedding.</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Please let us know of any allergies." id="allergies">
+                    </div>
+                  </div>
+
+                  </div>
+                  
+                  <div class="field">
                     <label class="label">Message</label>
                     <div class="control">
-                      <textarea class="textarea" placeholder="Textarea"></textarea>
-                    </div>
-                  </div>
-                  
-                  <div class="field">
-                    <div class="control">
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        I agree to the <a href="#">terms and conditions</a>
-                      </label>
-                    </div>
-                  </div>
-                  
-                  <div class="field">
-                    <div class="control">
-                      <label class="radio">
-                        <input type="radio" name="question">
-                        Yes
-                      </label>
-                      <label class="radio">
-                        <input type="radio" name="question">
-                        No
-                      </label>
+                      <textarea class="textarea" placeholder="Feel free to leave any comments or messages for us here." id="message"></textarea>
                     </div>
                   </div>
                   
