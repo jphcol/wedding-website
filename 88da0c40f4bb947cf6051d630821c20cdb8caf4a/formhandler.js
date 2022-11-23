@@ -1,12 +1,12 @@
 function handleForm () {
-    const nameForm = document.getElementByIdAll('formName').value;
-    const rsvpAttending = document.getElementByIdAll('rsvpAttending').value;
-    const rsvpNotAttending = document.getElementByIdAll('rsvpNotAttending').value;
-    const firstCourse = document.getElementByIdAll('firstCourse').value;
-    const mainCourse = document.getElementByIdAll('mainCourse').value;
-    const dessertCourse = document.getElementByIdAll('dessertCourse').value;
-    const allergies = document.getElementByIdAll('allergies').value;
-    const message = document.getElementByIdAll('message').value;
+    const nameForm = document.getElementById('formName').value;
+    const rsvpAttending = document.getElementById('rsvpAttending').value;
+    const rsvpNotAttending = document.getElementById('rsvpNotAttending').value;
+    const firstCourse = document.getElementById('firstCourse').value;
+    const mainCourse = document.getElementById('mainCourse').value;
+    const dessertCourse = document.getElementById('dessertCourse').value;
+    const allergies = document.getElementById('allergies').value;
+    const message = document.getElementById('message').value;
     const Http = new XMLHttpRequest();
     const url='https://6sxnidgy4j.execute-api.eu-west-2.amazonaws.com/Production';
     Http.open("POST", url);
