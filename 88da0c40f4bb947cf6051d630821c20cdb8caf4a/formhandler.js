@@ -1,7 +1,6 @@
 function handleForm () {
     const nameForm = document.getElementById('formName').value;
-    const rsvpAttending = document.getElementById('rsvpAttending').value;
-    const rsvpNotAttending = document.getElementById('rsvpNotAttending').value;
+    const rsvp = document.getElementById('rsvpRadio').value;
     const firstCourse = document.getElementById('firstCourse').value;
     const mainCourse = document.getElementById('mainCourse').value;
     const dessertCourse = document.getElementById('dessertCourse').value;
@@ -16,8 +15,7 @@ function handleForm () {
         JSON.stringify({
             "Guest_Number" : 160622,
             "Guest_Name" : nameForm,
-            "ATTENDING" : rsvpAttending,
-            "NOT_ATTENDING" : rsvpNotAttending,
+            "RSVP" : rsvp,
             "FIRST" : firstCourse,
             "MAIN" : mainCourse,
             "DESSERT" : dessertCourse,
