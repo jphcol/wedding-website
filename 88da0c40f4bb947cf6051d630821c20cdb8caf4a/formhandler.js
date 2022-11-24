@@ -1,6 +1,6 @@
 function handleForm () {
     const nameForm = document.getElementById('formName').value;
-    const rsvp = document.getElementById('rsvpRadio').value;
+    const rsvp = document.getElementByName('rsvpRadio').value;
     const firstCourse = document.getElementById('firstCourse').value;
     const mainCourse = document.getElementById('mainCourse').value;
     const dessertCourse = document.getElementById('dessertCourse').value;
