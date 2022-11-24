@@ -1,6 +1,13 @@
 function handleForm () {
     const nameForm = document.getElementById('formName').value;
-    const rsvp = document.getElementsByName('rsvpRadio').value;
+    const rsvpFunction = () => {
+      if(document.getElementById('rsvpAttending').checked == true) {
+        return 'Attending';
+      } else {
+        return 'Not Attending';
+      }
+    };
+    const rsvp = rsvpFunction();
     const firstCourse = document.getElementById('firstCourse').value;
     const mainCourse = document.getElementById('mainCourse').value;
     const dessertCourse = document.getElementById('dessertCourse').value;
