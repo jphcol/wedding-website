@@ -58,6 +58,15 @@
   fieldset[disabled] .pagination-ellipsis {
     cursor: not-allowed; }
 
+#thank-you-message {
+  visibility: hidden;
+}
+
+#thank-you-message.show {
+  visibility: visible;
+}
+
+
 .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
 .pagination-link,
