@@ -5,7 +5,7 @@ form.addEventListener("submit", evt => {
   evt.preventDefault();
   thankYouMessage.classList.add('show');
   handleForm();
-  setTimeout(() => form.submit(), 2000);
+  setTimeout(() => form.submit(), 1000);
 })
 }
 function handleForm () {
@@ -17,10 +17,20 @@ function handleForm () {
         return 'Not Attending';
       }
     };
+    const menuFunction = () => {
+      if(document.getElementById('adultMenu').checked == true) {
+        return 'Adult Menu';
+      } else if(document.getElementById('kidsMenu').checked == true) {
+        return 'Kids Menu';
+      } else {
+        return 'null';
+      }
+    }
     const rsvp = rsvpFunction();
+    const menu = menuFunction();
     const firstCourse = document.getElementById('firstCourse').value;
     const mainCourse = document.getElementById('mainCourse').value;
-    const dessertCourse = document.getElementById('dessertCourse').value;
+    const kidsOption = document.getElementById('kidsFood').value;
     const allergies = document.getElementById('allergies').value;
     const message = document.getElementById('message').value;
     fetch('https://6sxnidgy4j.execute-api.eu-west-2.amazonaws.com/Production', {
@@ -32,9 +42,10 @@ function handleForm () {
       "Guest_Number" : 160622,
       "Guest_Name" : nameForm,
       "RSVP" : rsvp,
+      "MENU" : menu,
       "FIRST" : firstCourse,
       "MAIN" : mainCourse,
-      "DESSERT" : dessertCourse,
+      "KIDSOPTION" : kidsOption,
       "ALLERGIES" : allergies,
       "MESSAGE" : message
       })

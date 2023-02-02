@@ -71,7 +71,7 @@
         <div class="columns">
           <div class="column">
             <p class="title">RSVP</p>
-            <p class="subtitle">Please have each member of your party complete the form. Feel free to reach out if you have any queries.</p>
+            <p class="subtitle">Please complete for each individual member of your party. Feel free to reach out if you have any queries.</p>
           </div>
           <div class="column">
             <figure>
@@ -94,67 +94,84 @@
                     </div>
                   </div>
 
-                  <div id="menuChoices" style="display: none">
-                  <div class="field">
-                    <label class="label">First Course</label>
-                    <div class="control">
-                      <div class="select">
-                        <select id="firstCourse">
-                          <option></option>
-                          <option>Miso Cod</option>
-                          <option>Smoked Trout</option>
-                        </select>
+                  <div id="menuAdultKid" style="display: none" class="field">
+                    <div class="field">
+                      <label class="label">Menu Choice</label>
+                      <div class="control">
+                        <input class="radio" type="radio" id="adultMenu" value="Adult" name="menuRadio" onclick="ageCheck()" required>
+                        <label for="rsvpAttending">Adult</label>
+                        <input class="radio" type="radio" id="kidsMenu" value="Child" name="menuRadio" onclick="ageCheck()">
+                        <label for="rsvpNotAttending">Child</label>
+                      </div>
+                  </div>
+                  <div id="menuChoices" style="display: none" class="field">
+                    <div class="field">
+                      <label class="label">First Course</label>
+                      <div class="control">
+                        <div class="select">
+                          <select id="firstCourse">
+                            <option></option>
+                            <option>Miso Cod</option>
+                            <option>Korean Cauliflower</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">Main Course</label>
+                      <div class="control">
+                        <div class="select">
+                          <select id="mainCourse">
+                            <option></option>
+                            <option>Beef</option>
+                            <option>Veggie Wellington</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="field">
-                    <label class="label">Main Course</label>
-                    <div class="control">
-                      <div class="select">
-                        <select id="mainCourse">
-                          <option></option>
-                          <option>Guineafowl</option>
-                          <option>Beef</option>
-                        </select>
+                  
+                  <div id="childOptions" style="display: none" class="field">
+                    <div class="field">
+                      <label class="label">Child Options</label>
+                      <div class="control">
+                        <div class="select">
+                          <select id="kidsFood">
+                            <option></option>
+                            <option>Under 5</option>
+                            <option>Under 5 Veggie</option>
+                            <option>Over 5</option>
+                            <option>Over 5 Veggie</option>
+                            <option>Bringing Own Food</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div class="field">
-                    <label class="label">Dessert</label>
-                    <div class="control">
-                      <div class="select">
-                        <select id="dessertCourse">
-                          <option></option>
-                          <option>Chocolate Torte</option>
-                          <option>Passionfruit Parfait</option>
-                        </select>
+                </div>
+
+                    <div class="field">
+                      <label class="label">Allergies/Dietary Requirements - We are having a nut free wedding.</label>
+                      <div class="control">
+                        <input class="input" type="text" placeholder="I am vegan..." id="allergies">
                       </div>
                     </div>
-                  </div>
-
-                  <div class="field">
-                    <label class="label">Allergies - We are having a nut free wedding.</label>
-                    <div class="control">
-                      <input class="input" type="text" placeholder="Please let us know of any allergies." id="allergies">
-                    </div>
-                  </div>
 
                   </div>
-                  
-                  <div class="field">
-                    <label class="label">Message</label>
-                    <div class="control">
-                      <textarea class="textarea" placeholder="Feel free to leave any comments or messages for us here." id="message"></textarea>
+                    
+                    <div class="field">
+                      <label class="label">Message</label>
+                      <div class="control">
+                        <textarea class="textarea" placeholder="We need a highchair please..." id="message"></textarea>
+                      </div>
                     </div>
-                  </div>
                   
-                  <div class="field is-grouped">
-                    <div class="control">
-                      <button type='submit' class="button is-link">Submit</button>
-                    </div>
-                    <div class="control">
+                    <div class="field is-grouped">
+                      <div class="control">
+                   <button type='submit' class="button is-link">Submit</button>
+                   </div>
+                   <div class="control">
                       <button class="button is-link is-light">Cancel</button>
                     </div>
                     <p class="title is-5" id="thank-you-message">
