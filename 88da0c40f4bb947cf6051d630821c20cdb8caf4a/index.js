@@ -6,6 +6,11 @@ burgerIcon.addEventListener('click', () => {
     burgerIcon.classList.toggle('is-active')
 });
 
+navbarMenu.addEventListener('click', () => {
+    navbarMenu.classList.toggle('is-active')
+    burgerIcon.classList.toggle('is-active')
+});
+
 function openTab(evt, tabName) {
     var i, x, tablinks;
     x = document.getElementsByClassName("content-tab");
