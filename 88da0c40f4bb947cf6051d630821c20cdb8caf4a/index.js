@@ -6,6 +6,20 @@ burgerIcon.addEventListener('click', () => {
     burgerIcon.classList.toggle('is-active')
 });
 
+function openTab(evt, tabName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("content-tab");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("navbar-item");
+    for (i = 0; i < x.length +1; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " is-active";
+  };
+
 function attendingCheck() {
     if (document.getElementById('rsvpAttending').checked) {
         document.getElementById('menuAdultKid').style.display = 'inline-block';

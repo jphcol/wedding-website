@@ -1,94 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>J &amp; R - Home</title>
+    <title>J &amp; R</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/mystyles.css" type="text/css">
     <link rel="icon" href="./jandrlogotab.png">
+    <style>
+      .google-maps {
+        position: relative;
+        padding-bottom: 50%; 
+        height: 0;
+        overflow: hidden;
+      }
+      .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+      }
+    </style>
   </head>
   <body class="has-navbar-fixed-top">
-    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation" >
-      <div class="navbar-brand">
-        <div class="navbar-item">
-          <img src="./jandrlogo.png">
-        </div>
-    
-        <a role="button" class="navbar-burger" id="burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
+    <script src="./formhandler.js"></script>
+      <!-- Hero head: will stick at the top -->
+        <nav class="navbar is-fixed-top is-primary">  
+          <div class="navbar-brand">
+            <div class="navbar-item">
+              <img src="./jrlogogreen.png">
+            </div>
+            <a role="button" class="navbar-burger" id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>   
+            <div class="navbar-menu" id="nav-links">
+              <div class="navbar-start">
+                <a class="navbar-item is-active" onclick="openTab(event,'EventInfo')">Home</a>
+                <a class="navbar-item" onclick="openTab(event,'RSVPMenu')">RSVP & Menu</a>
+                <a class="navbar-item" onclick="openTab(event,'DressCode')">Dress Code</a>
+                <a class="navbar-item" onclick="openTab(event,'Travel')">Travel</a>
+                <a class="navbar-item" onclick="openTab(event,'Accomodation')">Accommodation</a>
+                <a class="navbar-item" onclick="openTab(event,'Gifts')">Gifts</a>
+              </div>
+              <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                      <a class="button" href="mailto:jph.coles@gmail.com?cc=rebeccaforbes123@hotmail.com&subject=Enquiry about the Forbes Coles Wedding">
+                        <strong>Contact Us</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+             </div>
+             <script src="./index.js"></script>
+        </nav>
+      <section class="hero is-primary is-medium">
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body pt-0 pb-0 mb-0">
+          <section class="section pt-1 pb-0 m-0">
+            <div class="card-image has-text-centered pb-5">
+              <figure class="image is-128x128 is-inline-block">
+                <img src="jrlogogreen.png">
+              </figure>
+            </div>
+            <div>
+            <h1 class="title is-5 has-text-centered mb-0">The Wedding of</h1> <h1 class="title is-2 has-text-centered">Rebecca Jane Forbes<br> &amp;<br> Jack Peter Harold Coles</h1><p class="subtitle is-4 has-text-centered">Ramster Hall, Chiddingfold</p><p class="subtitle is-1 is-family-secondary has-text-centered">Friday 16 June 2023 - 2pm til midnight</p>
+            </div>
+          </section>
       </div>
+    </section>
+    <div class="container section">
+      <div id="EventInfo" class="content-tab" >
+        <section class="hero is-primary">
+          <div class="hero-body pt-5">
+            <div class="columns">
+              <div class="column">
+                <p class="subtitle is-4 mb-1 has-text-centered">Gillian Vida & Carl William Forbes invite you to join them in celebration of their daughter's marriage.</p><br>
+                <p class="subtitle is-5 has-text-justified">Follow the links at the top to RSVP with menu choices and find out more about the day...</p>
+              </div>
+              <div class="column">
+                <figure>
+                  <img src="./jandr.JPG" alt="The Happy Couple" style="border: 2px solid;">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="RSVPMenu" class="content-tab" style="display:none">
+        <section class="hero is-medium is-primary">
+          <div class="hero-body pt-5">
+            <div class="columns">
+              <div class="column">
+                <p class="subtitle has-text-justified">Please complete for each individual member of your party. Feel free to reach out if you have any queries.</p>
+              </div>
+              <div class="column">
+                <figure>
+                  <div id="form">
+                    <form id="rsvpForm">
+                      <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                          <input class="input" type="text" placeholder="Full Name" id="formName">
+                        </div>
+                      </div>
     
-      <div class="navbar-menu" id="nav-links">
-        <div class="navbar-start">
-          <a class="navbar-item" href="/88da0c40f4bb947cf6051d630821c20cdb8caf4a/index.html">
-            Home
-          </a>
+                      <div class="field">
+                        <label class="label">RSVP</label>
+                        <div class="control">
+                          <input class="radio" type="radio" id="rsvpAttending" value="Attending" name="rsvpRadio" onclick="attendingCheck()" required>
+                          <label for="rsvpAttending">Attending</label>
+                          <input class="radio" type="radio" id="rsvpNotAttending" value="Not Attending" name="rsvpRadio" onclick="attendingCheck()">
+                          <label for="rsvpNotAttending">Not Attending</label>
+                        </div>
+                      </div>
     
-          <a class="navbar-item" href="/88da0c40f4bb947cf6051d630821c20cdb8caf4a/rsvp.html">
-            RSVP & Menu
-          </a>
-
-          <a class="navbar-item" href="/88da0c40f4bb947cf6051d630821c20cdb8caf4a/dresscode.html">
-            Dress Code
-          </a>
-
-          <a class="navbar-item" href="/88da0c40f4bb947cf6051d630821c20cdb8caf4a/accomodation.html">
-            Accomodation
-          </a>
-
-          <a class="navbar-item" href="/88da0c40f4bb947cf6051d630821c20cdb8caf4a/travel.html">
-            Travel
-          </a>
-
-          <a class="navbar-item" href="/88da0c40f4bb947cf6051d630821c20cdb8caf4a/gifts.html">
-            Gifts
-          </a>
+                      <div id="menuAdultKid" style="display: none" class="field">
+                        <div class="field">
+                          <label class="label">Menu Choice</label>
+                          <div class="control">
+                            <input class="radio" type="radio" id="adultMenu" value="Adult" name="menuRadio" onclick="ageCheck()" required>
+                            <label for="rsvpAttending">Adult</label>
+                            <input class="radio" type="radio" id="kidsMenu" value="Child" name="menuRadio" onclick="ageCheck()">
+                            <label for="rsvpNotAttending">Child</label>
+                          </div>
+                      </div>
+                      <div id="menuChoices" style="display: none" class="field">
+                        <div class="field">
+                          <label class="label">First Course</label>
+                          <div class="control">
+                            <div class="select">
+                              <select id="firstCourse">
+                                <option></option>
+                                <option>Miso Cod</option>
+                                <option>Korean Cauliflower</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
     
-          
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary" href="mailto:jph.coles@gmail.com?cc=rebeccaforbes123@hotmail.com&subject=Enquiry about the Forbes Coles Wedding">
-                <strong>Contact Us</strong>
-              </a>
+                        <div class="field">
+                          <label class="label">Main Course</label>
+                          <div class="control">
+                            <div class="select">
+                              <select id="mainCourse">
+                                <option></option>
+                                <option>Beef</option>
+                                <option>Veggie Wellington</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      
+                      <div id="childOptions" style="display: none" class="field">
+                        <div class="field">
+                          <label class="label">Child Options</label>
+                          <div class="control">
+                            <div class="select">
+                              <select id="kidsFood">
+                                <option></option>
+                                <option>Under 5</option>
+                                <option>Under 5 Veggie</option>
+                                <option>Over 5</option>
+                                <option>Over 5 Veggie</option>
+                                <option>Bringing Own Food</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+    
+                        <div class="field">
+                          <label class="label">Allergies/Dietary Requirements - We are having a nut free wedding.</label>
+                          <div class="control">
+                            <input class="input" type="text" placeholder="I am vegan..." id="allergies">
+                          </div>
+                        </div>
+    
+                      </div>
+                        
+                        <div class="field">
+                          <label class="label">Message</label>
+                          <div class="control">
+                            <textarea class="textarea" placeholder="We need a highchair please..." id="message"></textarea>
+                          </div>
+                        </div>
+                      
+                        <div class="field is-grouped">
+                          <div class="control">
+                       <button type='submit' class="button is-link">Submit</button>
+                       </div>
+                       <div class="control">
+                          <button class="button is-link is-light">Cancel</button>
+                        </div>
+                        <p class="title is-5" id="thank-you-message">
+                          Thank you for your response!
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="DressCode" class="content-tab" style="display:none">
+        <section class="hero is-medium is-primary">
+          <div class="hero-body pt-5">
+            <div class="columns">
+              <div class="column">
+                <p class="subtitle has-text-justified">Jack and his band of merry men will be donning tails for the big day, please feel free to do the same if you so wish.<br><br> For those of you who would like to wear heels, Ramster Hall is a very old building with delicate floors, as a result we kindly ask that you opt for heels with a point of greater than 1cm&#178;.<br><br> Alternatively, you will need to use heel stoppers or protective caps. Such as <a href="https://www.amazon.co.uk/Protectors-Plastic-Stiletto-Weddings-Protecting/dp/B09FPM1M6Z/ref=asc_df_B09FPM1M6Z/?tag=googshopuk-21&linkCode=df0&hvadid=590025250773&hvpos=&hvnetw=g&hvrand=16110911523729556781&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1006986&hvtargid=pla-1646307238254&psc=1"> <u>these</u>.</a> </p>
+              </div>
+              <div class="column">
+                <figure>
+                  <img src="dresscodeimg.png" alt="dancing" style="border: 2px solid black;"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="Travel" class="content-tab" style="display:none">
+        <section class="hero is-medium is-primary">
+          <div class="hero-body pt-5">
+            <div class="columns">
+              <div class="column">
+                <p class="subtitle is-5 has-text-justified">The address for the venue is below. <br><br> There is limited parking at the venue so we do ask groups coming from near each other to consider travelling together and using taxis where possible.<br><br> Please ensure you have arrived at the venue for 1:45</p>
+                <h5 class="subtitle is-5 has-text-justified"><p>Ramster Hall, Petworth Rd, Chiddingfold, GU8 4SN</h5><br>
+                <a href="ramstertaxis.pdf" class="subtitle is-5" target=”_blank”>Click here for a list of local taxis</a>
+              </div>
+              <div class="column">
+                  <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.890416661235!2d-0.6501945482026328!3d51.09202984870785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875c954fa0c7d2f%3A0xec051b0f2428d161!2sRamster%20Hall!5e0!3m2!1sen!2suk!4v1659701603024!5m2!1sen!2suk" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="Accomodation" class="content-tab" style="display:none">
+        <section class="hero is-medium is-primary">
+          <div class="hero-body pt-5">
+            <div class="columns">
+              <div class="column pr-5">
+                <p class="subtitle has-text-justified">The wedding party are staying at the Lythe Hill Hotel, there should be rooms available if you would like to join us there. Please also find some alternative options in the local area.</p>
+              </div>
+              <div class="column pl-5">
+                <figure>
+                  <ol id="accomodationlist">                
+                    <li><a href="https://www.lythehill.co.uk" target=”_blank”>Lythe Hill Hotel</a></li>
+                    <li><a href="https://thecrownchiddingfold.com" target=”_blank”>The Crown Inn Chiddingfold</a></li>
+                    <li><a href="https://www.theswaninnchiddingfold.com" target=”_blank”>The Swan Inn Chiddingfold</a></li>
+                    <li><a href="https://kingsarmsandroyal.co.uk" target=”_blank”>The King's Arms & Royal Hotel Godalming</a></li>
+                    <li><a href="https://www.premierinn.com/gb/en/hotels/england/surrey/godalming/godalming.html" target=”_blank”>Premier Inn Godalming</a></li>
+                  </ol>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+     <div id="Gifts" class="content-tab" style="display:none">
+      <section class="hero is-medium is-primary">
+        <div class="hero-body pt-5">
+          <div class="columns">
+            <div class="column">
+              <p class="subtitle has-text-justified">Your attendance at our wedding is the best gift.<br><br>However, if you wish to follow with tradition and purchase a further gift, we would be very grateful for a financial donation toward the renovation of our new home.<br><br>Having lived together for a number of years now, we are lucky enough to already own the items you would expect to find on a traditional gift registry. Therefore, gift cards for any of the following would be hugely appreciated.</p>
+              <ul class="has-text-centered">
+                  <li>B&Q</li>
+                  <li>John Lewis</li>
+                  <li>Next</li>
+                  <li>Amazon</li>
+                  <li>National Garden Gift Voucher</li>
+                  <li>White Company</li>
+  
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-      <script src="./index.js"></script>
-    </nav>
-    <section class="section pt-1 pb-0 m-0">
-      <div class="card-image has-text-centered pb-5">
-        <figure class="image is-128x128 is-inline-block">
-          <img src="jrlogogreen.png">
-        </figure>
-      </div>
-      <div>
-      <h1 class="title is-5 has-text-centered mb-0">The Wedding of</h1> <h1 class="title is-2 has-text-centered">Rebecca Jane Forbes<br> &amp;<br> Jack Peter Harold Coles</h1><p class="subtitle is-4 has-text-centered">Ramster Hall, Chiddingfold</p><p class="subtitle is-1 is-family-secondary has-text-centered">Friday 16 June 2023 - 2pm til midnight</p>
-      </div>
-    </section>
-    <section class="hero is-medium is-primary">
-      <div class="hero-body pt-5">
-        <div class="section">
-          <p class="subtitle is-1 is-family-secondary"></p>
-        </div>
-        <div class="columns">
-          <div class="column">
-            <p class="subtitle is-4 mb-1 has-text-centered">Gillian Vida & Carl William Forbes invite you to join them in celebration of their daughter's marriage.</p><br>
-            <p class="subtitle is-5 has-text-justified">Follow the links to RSVP with menu choices and find out more about the day...</p>
-          </div>
-          <div class="column">
-            <figure>
-              <img src="./jandr.JPG" alt="The Happy Couple" style="border: 2px solid;">
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+     </div>
+  </div>
+    
     <section>
       <img src="leaf.png">
     </section>
